@@ -849,3 +849,16 @@ body{
 .card{
     margin:auto;
 }
+@media (max-width:768px){
+
+    .page{
+        min-height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .card{
+        margin-top:0;
+    }
+}
