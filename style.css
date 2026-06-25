@@ -825,3 +825,120 @@ button:active{
     }
 
 }
+/* =========================================
+   💎 PREMIUM MOBILE EXPERIENCE
+========================================= */
+
+@media (max-width:768px){
+
+    body{
+        background-attachment:scroll;
+    }
+
+    /* Smooth card spacing */
+    .card{
+
+        width:92%;
+        min-height:520px;
+
+        padding:22px 18px;
+
+        border-radius:28px;
+
+        backdrop-filter:blur(16px);
+
+        box-shadow:
+        0 15px 40px rgba(0,0,0,.35);
+
+        animation:mobilePop .5s ease;
+
+    }
+
+    @keyframes mobilePop{
+
+        from{
+            transform:scale(.96);
+            opacity:0;
+        }
+
+        to{
+            transform:scale(1);
+            opacity:1;
+        }
+
+    }
+
+    /* Text premium spacing */
+    .textbox{
+
+        padding:18px;
+
+        line-height:1.6;
+
+    }
+
+    .textbox h2{
+
+        font-size:22px;
+
+        letter-spacing:.5px;
+
+    }
+
+    .textbox p{
+
+        font-size:15px;
+
+    }
+
+    /* Radha image cinematic */
+    .photo{
+
+        width:160px;
+        height:160px;
+
+        margin-top:-90px;
+
+    }
+
+    .photo img{
+
+        transform:scale(1.08);
+
+    }
+
+    /* Buttons glow premium */
+    button{
+
+        padding:12px 26px;
+
+        font-size:14px;
+
+        box-shadow:
+        0 8px 20px rgba(255,0,180,.25);
+
+    }
+
+    button:active{
+        transform:scale(.96);
+    }
+
+    /* Sticker premium feel */
+    #sticker{
+
+        width:200px;
+
+        filter:drop-shadow(0 10px 20px rgba(0,0,0,.3));
+
+    }
+
+    /* Love text cinematic */
+    .loveText{
+
+        font-size:22px;
+
+        line-height:1.6;
+
+    }
+
+}
