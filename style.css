@@ -1,0 +1,825 @@
+/* =========================================
+   GOOGLE FONT
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:url("photos/4.png") center/cover no-repeat fixed;
+
+    position:relative;
+
+}
+
+/* Dark Overlay */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.28);
+
+    backdrop-filter:blur(3px);
+
+    z-index:-1;
+
+}
+
+/* Website */
+
+#website{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+}
+
+/* Pages */
+
+.page{
+
+    width:100%;
+    height:100%;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    animation:fade .45s ease;
+
+}
+
+.page.active{
+
+    display:flex;
+
+}
+
+/* Fade */
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:scale(.95);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+/* =========================================
+   MAIN GLASS CARD
+========================================= */
+
+.card{
+
+    width:min(430px,100%);
+    min-height:650px;
+
+    padding:35px 28px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+    overflow:hidden;
+
+    border-radius:35px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.22);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.35),
+    0 0 30px rgba(255,255,255,.08);
+
+}
+
+/* Glass Shine */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    top:-120px;
+    left:-90px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    filter:blur(20px);
+
+}
+
+/* =========================================
+   TEXT BOX
+========================================= */
+
+.textbox{
+
+    width:100%;
+
+    padding:28px;
+
+    text-align:center;
+
+    color:#fff;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.10);
+
+    border:1px solid rgba(255,255,255,.20);
+
+    box-shadow:
+
+    0 0 18px rgba(255,255,255,.08);
+
+}
+
+/* Heading */
+
+.textbox h2{
+
+    font-size:30px;
+
+    line-height:1.6;
+
+    font-weight:700;
+
+}
+
+.textbox h3{
+
+    font-size:25px;
+
+    margin-bottom:15px;
+
+}
+
+.textbox p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/* =========================================
+   BUTTON AREA
+========================================= */
+
+.buttonArea{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button{
+
+    border:none;
+    outline:none;
+
+    cursor:pointer;
+
+    padding:15px 36px;
+
+    border-radius:60px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(135deg,#ff4fb7,#8f00ff);
+
+    transition:.35s ease;
+
+    box-shadow:
+
+    0 10px 25px rgba(255,0,180,.35);
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 0 30px rgba(255,0,180,.50);
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
+/* =========================================
+   QUESTION PHOTO
+========================================= */
+
+.photo{
+
+    width:175px;
+    height:175px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-top:-115px;
+    margin-bottom:25px;
+
+    position:relative;
+
+    z-index:20;
+
+    animation:photoFloat 4s ease-in-out infinite;
+
+}
+
+.photo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    user-select:none;
+    pointer-events:none;
+
+    filter:
+    drop-shadow(0 0 15px rgba(255,255,255,.95))
+    drop-shadow(0 0 35px rgba(255,120,220,.70));
+
+}
+
+/* =========================================
+   PHOTO FLOAT
+========================================= */
+
+@keyframes photoFloat{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* =========================================
+   QUESTION PAGES
+========================================= */
+
+#page4 .card,
+#page5 .card,
+#page6 .card,
+#page7 .card,
+#page8 .card,
+#page9 .card,
+#page10 .card,
+#page11 .card,
+#page12 .card,
+#page13 .card,
+#page14 .card,
+#page15 .card{
+
+    padding-top:105px;
+
+}
+
+/* =========================================
+   HR
+========================================= */
+
+.textbox hr{
+
+    border:none;
+
+    height:1px;
+
+    margin:18px 0;
+
+    background:rgba(255,255,255,.25);
+
+}
+
+/* =========================================
+   QUESTION TEXT
+========================================= */
+
+.textbox b{
+
+    color:#ffd6f4;
+
+    font-weight:700;
+
+}
+
+.textbox p{
+
+    word-break:break-word;
+
+}
+/* =========================================
+   LOVE RESULT
+========================================= */
+
+#loveResult{
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    text-align:center;
+
+    color:#fff;
+
+    gap:20px;
+
+}
+
+.loveText{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    line-height:1.7;
+
+    color:#fff;
+
+    text-shadow:
+
+    0 0 12px rgba(255,255,255,.8),
+    0 0 28px rgba(255,80,180,.45);
+
+    animation:loveFade .7s ease;
+
+}
+
+@keyframes loveFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =========================================
+   STICKER
+========================================= */
+
+#stickerBox{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    margin-top:35px;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transform:translateY(30px);
+
+    transition:.6s ease;
+
+}
+
+#stickerBox.show{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+    transform:translateY(0);
+
+}
+
+#sticker{
+
+    width:290px;
+
+    max-width:90%;
+
+    height:auto;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    animation:stickerFloat 3.5s ease-in-out infinite;
+
+    transition:.35s;
+
+}
+
+#sticker:hover{
+
+    transform:scale(1.06);
+
+    filter:
+
+    drop-shadow(0 0 18px rgba(255,255,255,.75))
+    drop-shadow(0 0 28px rgba(255,100,200,.45));
+
+}
+
+@keyframes stickerFloat{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* =========================================
+   PAGE 18
+========================================= */
+
+.ending{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:15px;
+
+}
+
+.ending img{
+
+    width:100%;
+
+    max-width:420px;
+
+    border-radius:25px;
+
+    object-fit:contain;
+
+    box-shadow:
+
+    0 15px 45px rgba(0,0,0,.35),
+    0 0 25px rgba(255,255,255,.15);
+
+    animation:lastPhoto .8s ease;
+
+}
+
+@keyframes lastPhoto{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.92);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+/* =========================================
+   PAGE 16
+========================================= */
+
+#page16 .card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+#loveAnswerBtn{
+
+    position:relative;
+
+    transition:.35s ease;
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    #website{
+
+        padding:15px;
+
+    }
+
+    .card{
+
+        width:95%;
+
+        min-height:560px;
+
+        padding:28px 22px;
+
+        border-radius:28px;
+
+    }
+
+    .textbox{
+
+        padding:22px;
+
+    }
+
+    .textbox h2{
+
+        font-size:24px;
+
+    }
+
+    .textbox h3{
+
+        font-size:22px;
+
+    }
+
+    .textbox p{
+
+        font-size:16px;
+
+        line-height:1.7;
+
+    }
+
+    .photo{
+
+        width:145px;
+        height:145px;
+
+        margin-top:-95px;
+
+    }
+
+    button{
+
+        padding:14px 28px;
+
+        font-size:15px;
+
+    }
+
+    #sticker{
+
+        width:230px;
+
+    }
+
+    .loveText{
+
+        font-size:25px;
+
+    }
+
+}
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width:900px){
+
+    #website{
+
+        max-width:520px;
+
+        margin:auto;
+
+    }
+
+    .card{
+
+        min-height:720px;
+
+    }
+
+    .photo{
+
+        width:185px;
+        height:185px;
+
+    }
+
+    .textbox h2{
+
+        font-size:32px;
+
+    }
+
+}
+
+/* =========================================
+   SELECTION
+========================================= */
+
+::selection{
+
+    background:#ff4fb7;
+
+    color:#fff;
+
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar{
+
+    width:0;
+
+    height:0;
+
+}
+/* =========================================
+   RESTART BUTTON
+========================================= */
+
+#restartBtn{
+
+    position:absolute;
+
+    right:20px;
+    bottom:20px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:24px;
+    font-weight:bold;
+
+    color:#fff;
+
+    background:linear-gradient(135deg,#a100ff,#ff3cac);
+
+    box-shadow:0 8px 20px rgba(161,0,255,.45);
+
+    transition:.3s;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+}
+
+#restartBtn:hover{
+
+    transform:scale(1.1);
+
+}
+@media (max-width:768px){
+
+    #restartBtn{
+
+        width:48px;
+        height:48px;
+
+        font-size:20px;
+
+        right:15px;
+        bottom:15px;
+
+    }
+
+}
